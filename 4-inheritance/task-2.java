@@ -32,10 +32,10 @@ public class GameManager {
   private static GameManager _instance;
 
   public static GameManager get() {
-    if (this._instance == null) {
-      this._instance = new GameManager();
+    if (GameManager._instance == null) {
+      GameManager._instance = new GameManager();
     }
-    return this._instance;
+    return GameManager._instance;
   }
 
   private GameManager() {
