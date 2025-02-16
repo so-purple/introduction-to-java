@@ -35,12 +35,12 @@ public class Mob {
   }
 
   // 메서드 오버로딩
-  public void setHealth(int health) {
+  private void setHealth(int health) {
     System.out.println("void Mob.setHealth(int)");
     this.health = (float)health;
   }
 
-  public void setHealth(float health) {
+  private void setHealth(float health) {
     System.out.println("void Mob.setHealth(float)");
     this.health = health;
   }

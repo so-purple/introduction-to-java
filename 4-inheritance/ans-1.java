@@ -34,3 +34,40 @@ public class Main {
     assert frog.position.y == 4.5f;
   }
 }
+
+public class Vector3 {
+  public float x;
+  public float y;
+  public float z;
+
+  public Vector3(float x, float y, float z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+}
+
+public class Entity {
+  public Vector3 position;
+}
+
+public class Animal extends Entity {
+  public String name;
+  public int age;
+  public float speed;
+}
+
+public class Frog extends Animal {
+  public Frog(String name, int age, float speed, Vector3 position) {
+    this.name = name;
+    this.age = age;
+    this.speed = speed;
+    this.position = position;
+  }
+
+  public void jump() {
+    System.out.println("Frog is jumping");
+    this.position.y += this.speed;
+    System.out.println(this.position.y);
+  }
+}
