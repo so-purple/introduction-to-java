@@ -4,7 +4,7 @@ _마지막 회차 수업 중 문제 해결 예제_
 
 이 프로젝트는 IntelliJ IDEA로 작성되어, IntelliJ IDEA가 기본값으로 생성한 프로젝트 구조를 따릅니다.  
 
-소스코드는 [`./src/main/java/io/github/so_purple/` 경로 아래에서 확인할 수 있습니다. (클릭하여 바로가기)](./src/main/java/io/github/so_purple/)
+소스코드는 [`./untitled-java-game/src/main/java/io/github/so_purple` 경로 아래에서 확인할 수 있습니다. (클릭하여 바로가기)](./untitled-java-game/src/main/java/io/github/so_purple/)
 
 모든 클래스는 각자의 파일로 분리되어 있으며, 파일명이 클래스명으로 설정되어 있습니다.
 
