@@ -26,7 +26,10 @@ public class Main {
      *   - 이름: (영어) Golden Carrot (한국어) 황금 당근
      */
 
-
+    Item goldenCarrot = new Item("minecraft:golden_carrot", "Golden Carrot", "황금 당근");
+    goldenCarrot.display();
+    System.out.println(goldenCarrot.getLocalizedName(Locale.enUS));
+    System.out.println(goldenCarrot.getDisplayName(Locale.koKR));
     
   }
 }
@@ -60,4 +63,38 @@ public interface Localizable {
 public abstract class LocalizableObject implements Localizable {
   public String enUS;
   public String koKR;
+}
+
+public class Item extends LocalizableObject implements Displayable {
+  String identifier;
+
+  public Item(String identifier, String enUS, String koKR) {
+    this.identifier = identifier;
+    this.enUS = enUS;
+    this.koKR = koKR;
+  }
+
+  public String getLocalizedName(Locale locale) {
+    switch (locale) {
+      case Locale.enUS:
+        return "en-us";
+      case Locale.koKR:
+        return "ko-kr";
+    }
+    return "unknown";
+  }
+
+  public String getDisplayName(Locale locale) {
+    switch (locale) {
+      case Locale.enUS:
+        return enUS;
+      case Locale.koKR:
+        return koKR;
+    }
+    return "unknown";
+  }
+
+  public void display() {
+    System.out.println(identifier + ": " + enUS + ", " + koKR);
+  }
 }
