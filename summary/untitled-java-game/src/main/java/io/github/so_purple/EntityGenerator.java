@@ -1,6 +1,6 @@
 package io.github.so_purple;
 
-public class EntityGenertor {
+public class EntityGenerator {
     public static Entity generate(EntityType type) {
         switch (type) {
             case EntityType.Item:
